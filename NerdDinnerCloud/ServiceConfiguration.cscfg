@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="NerdDinnerCloud" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" schemaVersion="2012-10.1.8">
+  <Role name="NerdDinner">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=azurefestnerddinner;AccountKey=" />
+      <!--<Setting name="ApplicationServices" value="data source=tcp:[dbserver];User ID=[id];Password=[Password];Initial Catalog=NerdDinnerTEST;Trusted_Connection=False;Encrypt=True" />-->
+      <Setting name="NerdDinnerEntities" value="metadata=res://*/Models.NerdDinner.csdl|res://*/Models.NerdDinner.ssdl|res://*/Models.NerdDinner.msl;provider=System.Data.SqlClient;provider connection string=&quot;Data Source=tcp:[server];User ID=[id];Password=[pass];Initial Catalog=NerdDinnerTEST;Trusted_Connection=False;Encrypt=True;MultipleActiveResultSets=True&quot;" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
